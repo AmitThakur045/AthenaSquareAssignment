@@ -2,9 +2,10 @@ import React from "react";
 
 const VideoPlayer = ({ videoRef }) => {
   return (
-    <div className="w-[50rem] top-0 right-0 fixed object-cover h-[30rem] overflow-hidden flex flex-row items-center justify-center">
-      <video autoPlay loop muted ref={videoRef} />
-
+    <div className="w-full h-screen right-0 top-0 sticky  flex flex-row items-center justify-end">
+      <div className="w-[40rem] h-[30rem] rounded-3xl object-cover overflow-hidden">
+        <video autoPlay loop muted ref={videoRef} />
+      </div>
     </div>
   );
 };

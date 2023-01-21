@@ -18,19 +18,20 @@ export default function Home({ data }) {
       </Head>
       <main>
         <Hero />
-        <div className="w-full px-14 flex flex-col">
-          {/* <VideoPlayer sample="https://global-uploads.webflow.com/62efc7cb58ad153bfb146988/6341303c29c5340961dc9ae6_Mco-1-transcode.mp4" /> */}
+        <div className="w-full px-14 relative">
           <VideoPlayer videoRef={videoRef} />
-          {data.texts.map((currData, index) => {
-            return (
-              <Card
-                currData={currData}
-                currKey={index}
-                key={index}
-                videoRef={videoRef}
-              />
-            );
-          })}
+          <div className="flex flex-col w-full -mt-[40rem]">
+            {data.texts.map((currData, index) => {
+              return (
+                <Card
+                  currData={currData}
+                  currKey={index}
+                  key={index}
+                  videoRef={videoRef}
+                />
+              );
+            })}
+          </div>
         </div>
       </main>
     </>

@@ -23,7 +23,7 @@ const Card = ({ currData, videoRef, currKey }) => {
         videoRef.current.src = sameple3;
       }
     }
-    console.log(currData.heading, inView, videoRef.current.src, currKey);
+    // console.log(currData.heading, inView, videoRef.current.src, currKey);
   }, [inView]);
 
   return (
